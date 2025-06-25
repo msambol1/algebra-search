@@ -45,23 +45,91 @@
     </div>
 <div>
     <label> Price from-to:</label>
-        <input type="number" min="0" step="0.01" name="price-first"/>
-        <input type="number" max="1000" step="0.01" name="price-last"/>
+        <input type="number" min="0" step="0.01" name="price-first" value="0" required/>
+        <input type="number" max="1000" step="0.01" name="price-last" value="1000" required/>
 </div>
 
 <div>
 
-    <label> LEngth from-to:</label>
-    <input type="number" min="0" step="0.01" name="feature-57478-first"/>
-    <input type="number" max="100" step="0.01" name="feature-57478-last"/>
+    <label> Length from-to:</label>
+    <input type="number" min="0" step="0.01" name="feature-57478-first" value="0" required>
+    <input type="number" max="100" step="0.01" name="feature-57478-last" value="100" required/>
 </div>
 
-<div>
-    <label> LEngth from-to:</label>
+<!--<div>
+    <label> Length from-to:</label>
     <input type="range" min="0" step="0.01" name="feature-57478-first"/>
     <input type="range" max="100" step="0.01" name="feature-57478-last"/>
+</div>-->
+<div>
+    <input id="in stock" type="checkbox" value="true" name="vf">
+
+    <label for="in-stock">In stock</label>
 </div>
-<button type="submit">Search</button>
-        </form>
+<div>
+    <label><input type="checkbox" value="5" name="rating[]">5</label> <!--Ako želimo da korisnik odabere više vrijednosti treba nam [], za odabir samo jedne vrijednosti ne treba-->
+    <label><input type="checkbox" value="4" name="rating[]">4</label>
+    <label><input type="checkbox" value="3" name="rating[]">3</label>
+    <label><input type="checkbox" value="2" name="rating[]">2</label>
+    <label><input type="checkbox" value="1" name="rating[]">1</label>
+</div>
+
+<div>
+    <label><input type="checkbox" value="Black" name="feature-45225[]"> Black</label>
+    <label><input type="checkbox" value="Black - Red" name="feature-45225[]"> Black-Red</label>
+    <label><input type="checkbox" value="Green" name="feature-45225[]"> Green</label>
+    <label><input type="checkbox" value="Gold" name="feature-45225[]"> Gold</label>
+    <label><input type="checkbox" value="Blue" name="feature-45225[]"> Blue</label>
+</div>
+<div>
+    <button type="submit">Search</button>
+</div>
+</form>
+
+<!--NOVI OBRAZAC sa slušalicama-->
+<h1>Obrazac sa slušalicama</h1>
+
+ <form action="https://www.thomann.de/intl/headphones_studio_headphones.html" method ="get">
+        <div>
+          <!--name= obrascu kaže da bira jedno polje, ako nema name="" označiti će i YES i NO-->
+            <p>Replacable Cable</p>
+            <label><input type="radio" value="true" name="feature-50863">Yes</label>
+            <label><input type="radio" value="false" name="feature-50863">No</label>
+        </div>
+<div>
+    <button type="submit">Search</button>
+</div>
+
+ <!--PRICE RANGE - input obrazac za brojeve-->
+<div>
+    <h1>Price range</h1><br>
+    <label>Price from - to</label>
+    <input type="number" min="0" name="price-first"/>
+    <input type="number" max="10000" name="price-last">
+</div>
+    <div>
+        <button type="submit">Search</button>
+    </div>
+
+    <!--Availability- checkbox-->
+<div>
+    <h1> Availability</h1>
+    <label><input type="checkbox" value="true" name="vf">In stock</label>
+</div>
+<div>
+    <button type="submit"> Submit </button><br>
+</div>
+<div>
+    <!--Ratings - checkbox-->
+   <label> <input type="checkbox" value="5" name="rating[]"/>5 Ratings</label><br>
+   <label> <input type="checkbox" value="4" name="rating[]">4 Ratings</label><br>
+    <label><input type="checkbox" value="3" name="rating[]"/>3 Ratings</label><br>
+</div>
+<div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset ALL</button>
+</div>
+
+</form>
     </body>
 </html>
