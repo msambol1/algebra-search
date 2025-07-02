@@ -31,7 +31,8 @@
 
     <form action="https://www.thomann.de/intl/instrument_cables.html" method="get">
     <div>
-         <label>Sort:</label>
+        <fieldset> 
+        <legend>Sort:</legend>
          <select name="oa" id="sort">
              <option value=""disabled selected> Please choose</option>
              <option value="smb">Popularity</option>
@@ -41,19 +42,23 @@
              <option value="rel"> New first</option>
             <option value="ala">Alphabet A-Z</option>
             <option value="ald">Alphabet Z-A</option>
+         </fieldset>
     </select>
     </div>
 <div>
-    <label> Price from-to:</label>
+    <fieldset>
+    <legend> Price from-to:</legend>
         <input type="number" min="0" step="0.01" name="price-first" value="0" required/>
         <input type="number" max="1000" step="0.01" name="price-last" value="1000" required/>
+    </fieldset>
 </div>
 
 <div>
-
-    <label> Length from-to:</label>
+    <fieldset>
+    <legend> Length from-to:</legend>
     <input type="number" min="0" step="0.01" name="feature-57478-first" value="0" required>
     <input type="number" max="100" step="0.01" name="feature-57478-last" value="100" required/>
+</fieldset>
 </div>
 
 <!--<div>
@@ -67,19 +72,26 @@
     <label for="in-stock">In stock</label>
 </div>
 <div>
+    <fieldset>
+    <legend>Rating:</legend>
     <label><input type="checkbox" value="5" name="rating[]">5</label> <!--Ako želimo da korisnik odabere više vrijednosti treba nam [], za odabir samo jedne vrijednosti ne treba-->
     <label><input type="checkbox" value="4" name="rating[]">4</label>
     <label><input type="checkbox" value="3" name="rating[]">3</label>
     <label><input type="checkbox" value="2" name="rating[]">2</label>
     <label><input type="checkbox" value="1" name="rating[]">1</label>
+    </fieldset>
 </div>
 
 <div>
+    <fieldset>
+    <legend>Colors</legend>
     <label><input type="checkbox" value="Black" name="feature-45225[]"> Black</label>
     <label><input type="checkbox" value="Black - Red" name="feature-45225[]"> Black-Red</label>
     <label><input type="checkbox" value="Green" name="feature-45225[]"> Green</label>
     <label><input type="checkbox" value="Gold" name="feature-45225[]"> Gold</label>
     <label><input type="checkbox" value="Blue" name="feature-45225[]"> Blue</label>
+    </div>
+    <fieldset>
 </div>
 <div>
     <button type="submit">Search</button>
@@ -91,10 +103,12 @@
 
  <form action="https://www.thomann.de/intl/headphones_studio_headphones.html" method ="get">
         <div>
+            <fieldset>
           <!--name= obrascu kaže da bira jedno polje, ako nema name="" označiti će i YES i NO-->
-            <p>Replacable Cable</p>
+            <legend>Replacable Cable</legend>
             <label><input type="radio" value="true" name="feature-50863">Yes</label>
             <label><input type="radio" value="false" name="feature-50863">No</label>
+        </fieldset>
         </div>
 <div>
     <button type="submit">Search</button>
